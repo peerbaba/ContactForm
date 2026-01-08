@@ -3,17 +3,16 @@ import React, { useState } from "react";
 const Contactform = () => {
   const [b, setb] = useState([
     {
-      Name: "dummy",
-      Number: "dummy",
-      
+      name: "dummy",
+      number: "dummy",
     },
   ]);
   const a = (e) => {
     e.preventDefault();
 
     const c = {
-      Name: e.target[0].value,
-      Number: e.target[1].value,
+      name: e.target[0].value,
+      number: e.target[1].value,
     };
     setb([...b, c]);
     console.log(b);
@@ -28,17 +27,13 @@ const Contactform = () => {
         <input type="text" placeholder="Number" /> <br /> <br />
         <button>Submit</button>
       </form>
-    <div className="container1">
-      {b.map((item)=>(
-               
-        <div className="style">
-
-          Name: {item.Name},
-          Number:{item.Number}
-
-        </div>
-
-      ))}
+      <div></div>
+      <div>
+        {b.map((item) => (
+          <div className="container1">
+            name: {item.name}, number:{item.number}
+          </div>
+        ))}
       </div>
     </div>
   );
