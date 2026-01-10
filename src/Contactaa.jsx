@@ -30,7 +30,9 @@ const Contactform = () => {
       <div><div className="container">
   {b.map((item, index) => (
     <div key={index} className="style">
+
       <h4>{item.name}</h4>
+      
       <p>{item.number}</p>
     </div>
   ))}
@@ -42,3 +44,5 @@ const Contactform = () => {
 };
 
 export default Contactform;
+
+
