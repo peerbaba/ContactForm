@@ -1,42 +1,77 @@
 import React, { useState } from "react";
 
 const Contactform = () => {
-  const [b, setb] = useState([
-    {
-      name: "dummy",
-      number: "dummy",
-    },
-  ]);
-  const a = (e) => {
-    e.preventDefault();
+  const Initial = [
+    { Name: "Aarav", Number: "9000000001" },
+    { Name: "Vivaan", Number: "9000000002" },
+    { Name: "Aditya", Number: "9000000003" },
+    { Name: "Rohan", Number: "9000000004" },
+    { Name: "Kunal", Number: "9000000005" },
+    { Name: "Rahul", Number: "9000000006" },
+    { Name: "Sandeep", Number: "9000000007" },
+    { Name: "Amit", Number: "9000000008" },
+    { Name: "Vikas", Number: "9000000009" },
+    { Name: "Nikhil", Number: "9000000010" },
+    { Name: "Pankaj", Number: "9000000011" },
+    { Name: "Deepak", Number: "9000000012" },
+    { Name: "Manish", Number: "9000000013" },
+    { Name: "Ankit", Number: "9000000014" },
+    { Name: "Sachin", Number: "9000000015" },
+    { Name: "Ravi", Number: "9000000016" },
+    { Name: "Sunil", Number: "9000000017" },
+    { Name: "Ajay", Number: "9000000018" },
+    { Name: "Gaurav", Number: "9000000019" },
+    { Name: "Mohit", Number: "9000000020" },
+  ];
+  const [b, setb] = useState(Initial);
 
-    const c = {
-      name: e.target[0].value,
-      number: e.target[1].value,
+  const Hello = (e) => {
+    e.preventDefault();
+    console.log("hello");
+
+    const a = {
+      Name: e.target[0].value,
+      Number: e.target[1].value,
     };
-    setb([...b, c]);
-    console.log(b);
+
+    setb([...b, a]);
   };
 
-  return (
+  const d = (e) => {
+    if (e.key === "Enter") {
+      if (e.target.value !== "") {
+        console.log(e.target.value);
+        let a = b.filter((item) => {
+          return item.Name.includes(e.target.value);
+        });
+
+        console.log(a);
+        setb(a);
+      } else {
+        setb(Initial);
+      }
+    }
+  };
+
+    return (
     <div>
       Contactform <br />
-      <form onSubmit={a}>
-        <input type="text" placeholder="Name" />
-        <br /> <br />
+      <input type="text" placeholder="SearchBox" onKeyDown={d} />
+      <form onSubmit={Hello}>
+        {" "}
+        <br />
+        <input type="text" placeholder="Name" /> <br />
         <input type="text" placeholder="Number" /> <br /> <br />
         <button>Submit</button>
       </form>
-      <div><div className="container">
-  {b.map((item, index) => (
-    <div key={index} className="style">
-      <h4>{item.name}</h4>
-      <p>{item.number}</p>
-    </div>
-  ))}
-</div>
-</div>
-      
+      <div className="container1">
+        {b.map((item) => (
+          <div className="style" key={item.index}>
+            Name:{item.Name}
+            Number:{item.Number}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

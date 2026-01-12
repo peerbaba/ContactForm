@@ -1,21 +1,33 @@
 
-// const c = {
-//     address: "gfdfd",
-//     city: "moga"
-// }
-// const a = {
-//     name : "dev",
-//     class: 10,
-//     barnala: 148101,
-//     moga: 165401,
-//     asr: 157212
-// }
+let a = {
+    name: "vipan",
+    class:"10th",
+    rollno: "100",
+    result:"pass",
+    phNumber: "9803410390"
+}
 
-// const b = {
-//     [a.name]: a.class,
-//     pincode: a[c.city]
-// }
+let b ={
+    first_name: a.name,
+    cls: a.class,
+    r_no: a.rollno,
+    final_result: a.result
+}
 
-// console.log(b)
+let c = {
+    last_name: b.first_name,
+    class_name: b.cls,
+    roll_no: b.r_no,
+    result: b.final_result,
+    Phone_Number: funcA()
+}
 
-useState([])
+
+let d = []
+
+d = [...d,c]
+
+
+let funcA = ()=>{
+    return "9803410390"
+}
