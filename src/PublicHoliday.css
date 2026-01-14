@@ -1,0 +1,42 @@
+.country-select {
+  padding: 10px 16px;     /* more inner space */
+  font-size: 22px;        /* bigger text */
+  height: 52px;           /* taller select box */
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  outline: none;
+}
+
+.country-select {
+  min-width: 250px;       /* wider dropdown */
+  cursor: pointer;
+}
+
+.holiday-container {
+  max-width: 400px;
+}
+
+.holiday-list {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.holiday-list h3 {
+  margin-bottom: 10px;
+}
+
+.holiday-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.holiday-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.holiday-list li:last-child {
+  border-bottom: none;
+}

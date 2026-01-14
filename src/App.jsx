@@ -9,6 +9,7 @@ import Progress from "./Progress";
 import Checkbox from "./Checkbox";
 import Check from "./Check";
 import Contactform from "./Contactform";
+import PublicHoliday from "./PublicHoliday";
 
 
 function App() {
@@ -45,7 +46,9 @@ function App() {
       {/* <Progress progress= {progress} /> */}
      
       {/* <Check/> */}
-      <Contactform/>
+      {/* <Contactform/> */}
+      <PublicHoliday/>
+
     </>
   );
 }
