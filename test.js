@@ -1,33 +1,22 @@
+let electionAge=45;
+let numberOfVoter=10000;
 
-let a = {
-    name: "vipan",
-    class:"10th",
-    rollno: "100",
-    result:"pass",
-    phNumber: "9803410390"
+const postVote=(voterName,voterAge)=>{
+
+    console.log(voterName)
+    if (voterAge>electionAge) {
+        console.log("You Can Vote")
+        
+    } else { console.log("You Can Not Vote")
+        
+    }
 }
 
-let b ={
-    first_name: a.name,
-    cls: a.class,
-    r_no: a.rollno,
-    final_result: a.result
-}
+let name='dev'
+let age= 35
 
-let c = {
-    last_name: b.first_name,
-    class_name: b.cls,
-    roll_no: b.r_no,
-    result: b.final_result,
-    Phone_Number: funcA()
-}
+postVote(name,age)
 
-
-let d = []
-
-d = [...d,c]
-
-
-let funcA = ()=>{
-    return "9803410390"
-}
+[{name:"dev" ,
+    number:"11111"
+    }]
