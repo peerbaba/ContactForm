@@ -10,6 +10,9 @@ import Checkbox from "./Checkbox";
 import Check from "./Check";
 import Contactform from "./Contactform";
 import PublicHoliday from "./PublicHoliday";
+import Cal from './pages/calculator/cal';
+import Counter from "./pages/counter/Counter";
+import Button from "./Button";
 
 
 function App() {
@@ -47,7 +50,10 @@ function App() {
      
       {/* <Check/> */}
       {/* <Contactform/> */}
-      <PublicHoliday/>
+      {/* <PublicHoliday/> */}
+      {/* <Cal/> */}
+      {/* <Counter/> */}
+      <Button/>
 
     </>
   );
